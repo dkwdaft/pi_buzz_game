@@ -46,7 +46,8 @@ class BuzzController:
                     time.sleep(0.5)
             self.hid.write(self.light_array)
 
-            def get_button_status(self):
+
+def get_button_status(self):
                 data = self.hid.read(5)
                 if data:
                     self.buttonState[0]["red"] = ((data[4] & 0x80) != 0)  # red
@@ -73,13 +74,15 @@ class BuzzController:
                     self.buttonState[3]["orange"] = ((data[4] & 0x01) != 0)  # orange
                     self.buttonState[3]["blue"] = ((data[4] & 0x02) != 0)  # blue
 
-            def get_button_pressed(self, controller):
+
+def get_button_pressed(self, controller):
                 buttons = self.get_button_status()
                 for key, value in buttons[controller].items():
                     if (value):
                         return key
 
-            def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3, ]):
+
+def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3, ]):
                 while True:
                     buttons = self.get_button_status()
                     for i in controllers:
