@@ -95,6 +95,6 @@ def light_blink_stop(self):
 
 
 def light_set(self, controller, status):
-    self.light_array[controller + 2]
-    0xFF if status else 0x00
+    var = self.light_array[controller + 2]
+    var = 0xFF if status else 0x00
     self.hid.write((self.light_array))
