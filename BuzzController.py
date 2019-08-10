@@ -89,8 +89,10 @@ def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3, ]):
                         if (buttons[i][buzzButton]):
                             return i
 
-            def light_blink_stop(self):
-                self.light_blinking = False
+
+def light_blink_stop(self):
+    self.light_blinking = False
+
 
             def light_set(self, controller, status):
                 self.light_array[controller + 2] = 0xFF if status else 0x00
