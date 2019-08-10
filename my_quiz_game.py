@@ -18,7 +18,7 @@ for question in import_questions:
     for i in range(4):
         if i == 0:
             new_answer["correct"] = buttons[i]
-            new_answer[buttons[i]] = question["answers"][i]
+            new_answer[buttons[i]] = question["Answers"][i]
             questions.append(new_answer)
 
             buzz = BuzzController.BuzzController()
