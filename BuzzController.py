@@ -31,8 +31,8 @@ class BuzzController:
         blink_lights_off = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
         self.blink_lights_on = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 
-            for i in controller:
-                self.blink_lights_on[i + 2] = 0xFF
+        for i in controller:
+            self.blink_lights_on[i + 2] = 0xFF
 
             if (not self.light_blinking):
                 self.light_blinking = True
