@@ -42,7 +42,7 @@ for question in import_questions:
                     while True:
                         button = buzz.get_button_pressed(controller)
                         if button and button != "Red":
-                            if button == question["correct"]
+                            if button == question["correct"]:
                                 print("Controller " + str(controller) + " was correct")
                                 question_answered = True
                                 score[controller] += 1
