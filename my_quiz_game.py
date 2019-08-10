@@ -34,14 +34,14 @@ for question in import_questions:
                         print(i + " " + question[i.lower()])
 
                     thread.start_new_thread(buzz.light_blink, (available_controllers,))
-                    controller = buzz.controller_get_first_pressed("red", available_controllers)
+                    controller = buzz.controller_get_first_pressed("Red", available_controllers)
                     buzz.light_blinking = False
                     buzz.light_set(controller, True)
                     time.sleep(0.5)
 
                     while True:
                         button = buzz.get_button_pressed(controller)
-                        if button and button != "red":
+                        if button and button != "Red":
                             if button == question["correct"]:
                                 print("Controller " + str(controller) + " was correct")
                                 question_answered = True
