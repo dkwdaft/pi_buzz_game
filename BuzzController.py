@@ -27,7 +27,7 @@ class BuzzController:
 
         self.hid.write(self.light_array)
 
-        def light_blink(self, controller):
+    def light_blink(self, controller):
             blink_lights_off = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
             self.blink_lights_on = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 
