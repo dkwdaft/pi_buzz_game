@@ -4,7 +4,7 @@ import time
 
 h = hid.device()
 
-h.open(0x54c, 0x002)
+h.open(0x54c, 0x1000)
 
 h.set_nonblocking(1)
 
