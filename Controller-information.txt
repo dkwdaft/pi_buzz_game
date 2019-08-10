@@ -1,2 +1,2 @@
-product_id : 4096
-vendor_id : 1356
+product_id : 4096 = hex 0x1000
+vendor_id : 1356  = hex 0x54c
