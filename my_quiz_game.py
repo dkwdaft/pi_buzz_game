@@ -31,7 +31,8 @@ for question in import_questions:
                     print(question["question"])
 
                     for i in available_answers:
-                        print(i + " " + question[i.lower()])
+                        print(i + " " + question
+                        {i.lower()})
 
                     thread.start_new_thread(buzz.light_blink, (available_controllers,))
                     controller = buzz.controller_get_first_pressed("Red", available_controllers)
