@@ -84,7 +84,7 @@ class BuzzController:
         while True:
             buttons = self.get_button_status()
             for i in controllers:
-                if (buttons[i][buzzButton]):
+                if buttons[i][buzzButton]:
                     return i
 
     def light_blink_stop(self):
