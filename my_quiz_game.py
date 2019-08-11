@@ -24,14 +24,14 @@ for question in import_questions:
             buzz = BuzzController.BuzzController()
             for question in questions:
                 question_answered = False
-                available_answers = ["Blue", "Orange", "Green", "Yellow"]
+                available_answers = ['Blue', "Orange", "Green", "Yellow"]
                 available_controllers = [0, 1, 2, 3]
 
                 while not question_answered:
                     print(question["question"])
 
-                    for j in available_answers:
-                        print(j + " " + question[j.lower()])
+                    for i in available_answers:
+                        print(i + " " + question[i.lower()])
 
                     thread.start_new_thread(buzz.light_blink, (available_controllers,))
                     controller = buzz.controller_get_first_pressed("Red", available_controllers)
