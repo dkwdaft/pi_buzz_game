@@ -72,24 +72,24 @@ class BuzzController:
                     self.buttonState[3]["green"] = ((data[3] & 0x80) != 0)  # green
                     self.buttonState[3]["orange"] = ((data[4] & 0x01) != 0)  # orange
                     self.buttonState[3]["blue"] = ((data[4] & 0x02) != 0)  # blue
+                return self.buttonState
 
     def get_button_pressed(self, controller):
-                buttons = self.get_button_status()
-                for key, value in buttons[controller].items():
-                    if (value):
-                        return key
+        buttons = self.get_button_status()
+        for key, value in buttons[controller].items():
+            if (value):
+                return key
 
-    def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3, ]):
-                while True:
-                    buttons = self.get_button_status()
-                    for i in controllers:
-                        if (buttons[i][buzzButton]):
-                            return i
+    def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3])
+        while True:
+            buttons = self.get_button_status()
+            for i in controllers:
+                if (buttons[i][buzzButton]):
+                    return i
 
     def light_blink_stop(self):
         self.light_blinking = False
 
     def light_set(self, controller, status):
-        self.light_array[controller + 2]
-        0xFF if status else 0x00
-        self.hid.write((self.light_array))
+        self.light_array[controller + 2] = 0xFF if status else 0x00
+        self.hid.write(self.light_array)
