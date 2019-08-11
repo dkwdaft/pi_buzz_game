@@ -11,7 +11,7 @@ import_questions = [
 questions = []
 score = [0, 0, 0, 0]
 for question in import_questions:
-    buttons = [blue', "orange", "green", "yellow"]
+    buttons = ['blue', "orange", "green", "yellow"]
     new_answer = {}
     shuffle(buttons)
     new_answer['question'] = question['question']
