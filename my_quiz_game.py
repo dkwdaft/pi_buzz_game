@@ -11,7 +11,7 @@ import_questions = [
 questions = []
 score = [0, 0, 0, 0]
 for question in import_questions:
-    buttons = ["blue", "orange", "green", "yellow"]
+    buttons = [blue', "orange", "green", "yellow"]
     new_answer = {}
     shuffle(buttons)
     new_answer['question'] = question['question']
@@ -24,7 +24,7 @@ for question in import_questions:
             buzz = BuzzController.BuzzController()
             for question in questions:
                 question_answered = False
-                available_answers = ['Blue', "Orange", "Green", "Yellow"]
+    available_answers = ["Blue", "Orange", "Green", "Yellow"]
                 available_controllers = [0, 1, 2, 3]
 
                 while not question_answered:
