@@ -34,7 +34,7 @@ for question in questions:
             print(i + ": " + question[i])
 
         thread.start_new_thread(buzz.light_blink, (available_controllers,))
-        controller = buzz.controller_get_first_pressed("Red", available_controllers)
+        controller = buzz.controller_get_first_pressed("red", available_controllers)
         buzz.light_blinking = False
         buzz.light_set(controller, True)
         time.sleep(0.5)

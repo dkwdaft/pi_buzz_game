@@ -34,11 +34,11 @@ class BuzzController:
         for i in controller:
             self.blink_lights_on[i + 2] = 0xFF
 
-            if (not self.light_blinking):
+            if not self.light_blinking:
                 self.light_blinking = True
                 blink = True
                 while self.light_blinking:
-                    if (blink):
+                    if blink:
                         self.hid.write(self.blink_lights_on)
                     else:
                         self.hid.write(blink_lights_off)
