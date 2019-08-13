@@ -81,11 +81,11 @@ class BuzzController:
                 return key
 
     def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3]):
-    while True:
-        buttons = self.get_button_status()
-        for i in controllers:
-            if buttons[i][buzzButton]:
-                return i
+        while True:
+            buttons = self.get_button_status()
+            for i in controllers:
+                if buttons[i][buzzButton]:
+                    return i
 
 
 def light_blink_stop(self):
