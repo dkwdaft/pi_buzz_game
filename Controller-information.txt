@@ -27,4 +27,4 @@ vendor_id : 1356  = hex 0x54c
                     self.buttonState[3]["green"] = ((data[3] & 0x80) != 0)  # green
                     self.buttonState[3]["orange"] = ((data[4] & 0x01) != 0)  # orange
                     self.buttonState[3]["blue"] = ((data[4] & 0x02) != 0)  # blue
-                return self.buttonState
+                            return self.buttonState
