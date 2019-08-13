@@ -87,11 +87,9 @@ class BuzzController:
                 if buttons[i][buzzButton]:
                     return i
 
+    def light_blink_stop(self):
+        self.light_blinking = False
 
-def light_blink_stop(self):
-    self.light_blinking = False
-
-
-def light_set(self, controller, status):
-    self.light_array[controller + 2] = 0xFF if status else 0x00
-    self.hid.write(self.light_array)
+    def light_set(self, controller, status):
+        self.light_array[controller + 2] = 0xFF if status else 0x00
+        self.hid.write(self.light_array)
