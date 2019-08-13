@@ -48,7 +48,7 @@ class BuzzController:
 
     def get_button_status(self):
         data = self.hid.read(5)
-                if data:
+        if data:
                     self.buttonState[0]["red"] = ((data[4] & 0x80) != 0)  # red
                     self.buttonState[0]["yellow"] = ((data[5] & 0x01) != 0)  # yellow
                     self.buttonState[0]["green"] = ((data[5] & 0x02) != 0)  # green
