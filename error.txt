@@ -1,0 +1,13 @@
+what Is the capital of Australia
+Blue: Melbourne
+Orange: Sydney
+Green: Hobart
+Yellow: Canberra
+Traceback (most recent call last):
+  File "game_test.py", line 37, in <module>
+    controller = buzz.controller_get_first_pressed("red", available_controllers)
+  File "/home/pi/git_repositories/pi_buzz_game/BuzzController.py", line 85, in controller_get_first_pressed
+    buttons = self.get_button_status()
+  File "/home/pi/git_repositories/pi_buzz_game/BuzzController.py", line 53, in get_button_status
+    self.buttonState[0]["yellow"] = ((data[5] & 0x01) != 0)  # yellow
+IndexError: list index out of range

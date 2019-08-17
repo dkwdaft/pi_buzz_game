@@ -77,7 +77,7 @@ class BuzzController:
     def get_button_pressed(self, controller):
         buttons = self.get_button_status()
         for key, value in buttons[controller].items():
-            if (value):
+            if value:
                 return key
 
     def controller_get_first_pressed(self, buzzButton, controllers=[0, 1, 2, 3]):
