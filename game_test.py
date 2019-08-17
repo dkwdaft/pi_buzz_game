@@ -55,4 +55,4 @@ for question in questions:
         buzz.light_set(controller, False)
         time.sleep(1)
 
-        print("Final score:" + list)
+        print("Final score:", list(score))
