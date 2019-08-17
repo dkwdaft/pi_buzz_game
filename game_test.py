@@ -16,7 +16,7 @@ for question in import_questions:
     shuffle(buttons)
     new_answer['question'] = question['question']
     for i in range(4):
-        if i == 0:
+        if (i == 0):
             new_answer["correct"] = buttons[i]
         new_answer[buttons[i]] = question["Answers"][i]
         questions.append(new_answer)
@@ -41,13 +41,13 @@ for question in questions:
 
         while True:
             button = buzz.get_button_pressed(controller)
-            if button and button != "Red":
-                if button == question["correct"]:
+            if (button and button != "Red"):
+                if (button == question["correct"]):
                     print("Controller " + str(controller) + " was correct")
                     question_answered = True
                     score[controller] += 1
                     break
-                elif button.capitalize() in available_answers:
+                elif (button.capitalize() in available_answers):
                     print("Sorry incorrect answer")
                 available_controllers.remove(controller)
                 available_answers.remove(button.capitalize())
